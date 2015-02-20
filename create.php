@@ -6,7 +6,7 @@
 </head>
 <body>
 <!-- multistep form -->
-<form id="msform" action="generator.php">
+<form id="msform" method="post" action="generator.php">
 	<!-- progressbar -->
 	<ul id="progressbar">
 		<li class="active">Start</li>

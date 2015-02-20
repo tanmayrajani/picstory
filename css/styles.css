@@ -130,3 +130,10 @@ body {
 	background: #27AE60;
 	color: white;
 }
+
+.happy{
+	height:200px;
+	width:200px;
+	margin: 10px auto 30px auto;
+	display:block;
+}
