@@ -11,6 +11,7 @@
     <h3 class="fs-subtitle">You've just created a picstory!</h3>
     <img class="happy" src="media/happy64.png" alt="Awesome" />
     <input type="button" name="view" class="view action-button" value="View" />
+    <input type="button" name="edit" class="edit action-button" value="Edit" />
     <input type="button" name="fbshare" class="fbshare action-button" value="Facebook" />
     <input type="button" name="twshare" class="twshare action-button" value="Twitter" />
     <input type="button" name="gpshare" class="gpshare action-button" value="Google+" />
@@ -22,6 +23,10 @@
 <script>
   $(".view").click(function(){
     window.open('my-picstory-1.html','_blank');
+  });
+
+  $(".edit").click(function(){
+    window.open('create.php','_self');
   });
 
   $(".fbshare").click(function(){
