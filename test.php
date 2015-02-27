@@ -1,12 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
+<?php $myFile = "fileName.html";
+$fh = fopen($myFile, 'w') or die("can't open file");
+$stringData = '<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>JSON</title>
 
-    <meta name="description" content="Picstory" />
+    <meta name="description" content="This is a Picstory. It is a photo presentation application created by Tanmay Rajani." />
     <meta name="author" content="Tanmay Rajani" />
     <link href="css/stylesofstory.css" rel="stylesheet" />
 </head>
@@ -62,3 +60,5 @@
 <script>$(function(){$("#impress").jmpress();});</script>
 </body>
 </html>
+';
+fwrite($fh, $stringData); ?>
