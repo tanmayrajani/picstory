@@ -38,109 +38,19 @@ q:before, q:after {
     content: none;
 }
 
-.fullform{
-    margin-left: 30px;
-    float: left;
-    margin-bottom:30px;
-}
-
-.imagee{
-    margin-top: 50px;
-    float: right;
-}
-
-img:after{
-    content: 'Douglas Crockford'
-}
-
 .titlecenter{
     margin-top: 60px
 }
 
 ::selection { background-color: #FFA; color: #990000;}
 
-h1.whatisjson {
-    font-weight:bold;
-    margin-top: 30px;
-    padding-bottom: 30px;
-    border-bottom:3px solid black;
-    font-size:60px;
-    margin-bottom:40px;
-}
-
-ul.aboutjson li {
-    font-size: 37px;
-    padding-top: 40px;
-    margin-left: 30px;
-}
-
-ul.writejson li,ul.writejson2 li{
-    font-weight: normal;
-    font-size: 32px;
-    margin-left: 30px;
-}
-
 a{
     text-decoration: none;
     color: #990000;
 }
 
-ul.writejson li{
-    padding-top: 28px;
-}
-
-ul.writejson2 li{
-    padding-top: 18px;
-}
-
-span.usage{
-    font-size: 21px;
-    padding-left:55px;
-
-}
 
 
-ul li:before, .cube ul li:before{
-    content: '✎ \0020';
-}
-
-.cube ul li{
-    font-size: 25px;
-    text-decoration: none;
-}
-
-span.jsonvalues{
-    font-size: .85em;
-    font-weight: bolder;
-    padding-left: 48px;
-}
-
-span.jsonnote{
-    font-size: .84em;
-    font-weight: bolder;
-
-}
-
-span.tttitle{
-    font-size: 148px;
-    color:#993366;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-#sp1{
-    float: left;
-    font-weight: 400;
-    margin-top: 60px
-}
-
-#sp2{
-    float: right;
-    margin-top: 48px;
-}
 
 body {
     min-height: 740px;
@@ -161,11 +71,6 @@ i, em { font-style: italic }
     display: none;
 }
 
-.jsontitle {
-    font-weight:bold;
-    font-size:100px;
-    margin-bottom:30px;
-}
 
 .step {
     position: relative;
@@ -185,8 +90,6 @@ i, em { font-style: italic }
 
 .impress-enabled .step {
     margin: 0;
-    opacity: 0.3;
-
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
     -ms-transition:     opacity 1s;
@@ -198,24 +101,13 @@ i, em { font-style: italic }
 
 .slide,.slide2 {
     display: block;
-
-    width: 900px;
-    height: 700px;
     padding: 40px 60px;
-
+    background:transparent;
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-
     font-size: 30px;
     line-height: 36px;
     letter-spacing: -1px;
-}
-
-.slide{
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, .3);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 }
 
 .slide q {
@@ -230,47 +122,6 @@ i, em { font-style: italic }
     white-space: nowrap;
 }
 
-#title {
-    padding: 0;
-}
-
-#title .try {
-    font-size: 64px;
-    position: absolute;
-    top: -0.5em;
-    left: 1.5em;
-
-    -webkit-transform: translateZ(20px);
-    -moz-transform:    translateZ(20px);
-    -ms-transform:     translateZ(20px);
-    -o-transform:      translateZ(20px);
-    transform:         translateZ(20px);
-}
-
-#title h1 {
-    font-size: 190px;
-
-    -webkit-transform: translateZ(50px);
-    -moz-transform:    translateZ(50px);
-    -ms-transform:     translateZ(50px);
-    -o-transform:      translateZ(50px);
-    transform:         translateZ(50px);
-}
-
-#title .footnote, #title .footnote {
-    font-size: 32px;
-}
-
-#imagination {
-    width: 600px;
-}
-
-#imagination .imagination {
-    font-size: 78px;
-}
-
-#overview { display: none }
-
 .impress-on-overview .step {
     opacity: 1;
     cursor: pointer;
@@ -281,10 +132,28 @@ i, em { font-style: italic }
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
 
-.names{
-    margin-left: 200px;
-}
-
 .step:not(.active) {display: none;}
 .not-supported .step {position: relative;opacity: 1;margin: 20px auto;}
 .active{visibility:visible}
+
+.first-title{
+  margin:30px 10px 20px 10px;
+  font-size:3.3em;
+  line-height:1.1em;
+}
+
+.endtitle{
+  font-size:1.43em;
+}
+
+.imgclass{
+  height:100%;
+  width:100%;
+  background:transparent;
+}
+
+.briefmemory{
+  font-size:1.5em;
+  line-height:1.3em;
+  margin:150px 10px;
+}

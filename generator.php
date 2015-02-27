@@ -1,4 +1,11 @@
-<?php  ?>
+<?php
+  if(isset($_POST['submit'])){
+    
+  }
+  else echo "something went wrong!";
+
+
+?>
 <html>
 <head>
   <title>Picstory</title>
