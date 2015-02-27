@@ -4,7 +4,7 @@
     $filename="user1.html";
     $fh = fopen($filename, 'w') or die("can't open file");
     if(isset($_POST['pic1'])){
-      $uploaddir = 'c:\wamp\tmp';
+      $uploaddir = "/git/picstory/";
       $uploadfile = $uploaddir . basename($_FILES['pic1']['name']);
       echo '<pre>';
       if (move_uploaded_file($_FILES['pic1']['tmp_name'], $uploadfile)) {
