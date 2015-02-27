@@ -27,13 +27,6 @@
 		<input type="text" name="event" placeholder="Event Name (e.g. Mom's Birthday / Trip to California)" />
 		<input type="text" name="location" placeholder="Location (Optional)" />
 		<input type="text" name="cred" placeholder="Picstory By ... (Enter only Name / Nickname)" />
-		<input type="button" name="next" class="next action-button" value="Next" />
-	</fieldset>
-	<fieldset>
-		<h2 class="fs-title">Step 2</h2>
-		<h3 class="fs-subtitle">Event Details / Photo</h3>
-		<input type="textarea" name="detail1" placeholder="Some brief sweet memories..." /><br/>OR<br/>
-		<input type="file" name="pic1" accept="image/*">
 		<select>
 			<option selected disabled value="">Select Visual Effect</option>
 			<option value="fade-in">Fade-in</option>
@@ -44,6 +37,13 @@
 			<option value="rotate-360">Rotate 360 degree</option>
 			<option value="slide-right">Slide-right</option>
 		</select>
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">Step 2</h2>
+		<h3 class="fs-subtitle">Event Details / Photo</h3>
+		<input type="textarea" name="detail1" placeholder="Some brief sweet memories..." /><br/>OR<br/>
+		<input type="file" name="pic1" accept="image/*">
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
@@ -52,16 +52,6 @@
 		<h3 class="fs-subtitle">Event Details / Photo</h3>
 		<input type="textarea" name="detail2" placeholder="Some brief sweet memories..." /><br/>OR<br/>
 		<input type="file" name="pic2" accept="image/*">
-		<select>
-			<option selected disabled value="">Select Visual Effect</option>
-			<option value="fade-in">Fade-in</option>
-			<option value="fade-out">Fade-out</option>
-			<option value="slide-left">Slide-left</option>
-			<option value="slide-right">Slide-right</option>
-			<option value="rotate-180">Rotate 180 degree</option>
-			<option value="rotate-360">Rotate 360 degree</option>
-			<option value="slide-right">Slide-right</option>
-		</select>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
@@ -70,16 +60,6 @@
 		<h3 class="fs-subtitle">Event Details / Photo</h3>
 		<input type="textarea" name="detail3" placeholder="Some brief sweet memories..." /><br/>OR<br/>
 		<input type="file" name="pic3" accept="image/*">
-		<select>
-			<option selected disabled value="">Select Visual Effect</option>
-			<option value="fade-in">Fade-in</option>
-			<option value="fade-out">Fade-out</option>
-			<option value="slide-left">Slide-left</option>
-			<option value="slide-right">Slide-right</option>
-			<option value="rotate-180">Rotate 180 degree</option>
-			<option value="rotate-360">Rotate 360 degree</option>
-			<option value="slide-right">Slide-right</option>
-		</select>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
@@ -88,16 +68,6 @@
 		<h3 class="fs-subtitle">Event Details / Photo</h3>
 		<input type="textarea" name="detail4" placeholder="Some brief sweet memories..." /><br/>OR<br/>
 		<input type="file" name="pic4" accept="image/*">
-		<select>
-			<option selected disabled value="">Select Visual Effect</option>
-			<option value="fade-in">Fade-in</option>
-			<option value="fade-out">Fade-out</option>
-			<option value="slide-left">Slide-left</option>
-			<option value="slide-right">Slide-right</option>
-			<option value="rotate-180">Rotate 180 degree</option>
-			<option value="rotate-360">Rotate 360 degree</option>
-			<option value="slide-right">Slide-right</option>
-		</select>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
@@ -106,16 +76,6 @@
 		<h3 class="fs-subtitle">Event Details / Photo</h3>
 		<input type="textarea" name="detail5" placeholder="Some brief sweet memories..." /><br/>OR<br/>
 		<input type="file" name="pic5" accept="image/*">
-		<select>
-			<option selected disabled value="">Select Visual Effect</option>
-			<option value="fade-in">Fade-in</option>
-			<option value="fade-out">Fade-out</option>
-			<option value="slide-left">Slide-left</option>
-			<option value="slide-right">Slide-right</option>
-			<option value="rotate-180">Rotate 180 degree</option>
-			<option value="rotate-360">Rotate 360 degree</option>
-			<option value="slide-right">Slide-right</option>
-		</select>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
@@ -124,16 +84,6 @@
 		<h3 class="fs-subtitle">Event Details / Photo</h3>
 		<input type="textarea" name="detail6" placeholder="Some brief sweet memories..." /><br/>OR<br/>
 		<input type="file" name="pic6" accept="image/*">
-		<select>
-			<option selected disabled value="">Select Visual Effect</option>
-			<option value="fade-in">Fade-in</option>
-			<option value="fade-out">Fade-out</option>
-			<option value="slide-left">Slide-left</option>
-			<option value="slide-right">Slide-right</option>
-			<option value="rotate-180">Rotate 180 degree</option>
-			<option value="rotate-360">Rotate 360 degree</option>
-			<option value="slide-right">Slide-right</option>
-		</select>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
@@ -142,16 +92,6 @@
 		<h3 class="fs-subtitle">Event Details / Photo</h3>
 		<input type="textarea" name="detail7" placeholder="Some brief sweet memories..." /><br/>OR<br/>
 		<input type="file" name="pic7" accept="image/*">
-		<select>
-			<option selected disabled value="">Select Visual Effect</option>
-			<option value="fade-in">Fade-in</option>
-			<option value="fade-out">Fade-out</option>
-			<option value="slide-left">Slide-left</option>
-			<option value="slide-right">Slide-right</option>
-			<option value="rotate-180">Rotate 180 degree</option>
-			<option value="rotate-360">Rotate 360 degree</option>
-			<option value="slide-right">Slide-right</option>
-		</select>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
@@ -160,16 +100,6 @@
 		<h3 class="fs-subtitle">Event Details / Photo</h3>
 		<input type="textarea" name="detail8" placeholder="Some brief sweet memories..." /><br/>OR<br/>
 		<input type="file" name="pic8" accept="image/*">
-		<select>
-			<option selected disabled value="">Select Visual Effect</option>
-			<option value="fade-in">Fade-in</option>
-			<option value="fade-out">Fade-out</option>
-			<option value="slide-left">Slide-left</option>
-			<option value="slide-right">Slide-right</option>
-			<option value="rotate-180">Rotate 180 degree</option>
-			<option value="rotate-360">Rotate 360 degree</option>
-			<option value="slide-right">Slide-right</option>
-		</select>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
