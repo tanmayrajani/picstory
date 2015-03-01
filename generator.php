@@ -1,21 +1,42 @@
 <?php
-
+  $_SESSION['username']="helllo";
   if(isset($_POST['submit'])){
     $filename="user1.html";
     $fh = fopen($filename, 'w') or die("can't open file");
-    if(isset($_POST['pic1'])){
-      $uploaddir = "/git/picstory/";
-      $uploadfile = $uploaddir . basename($_FILES['pic1']['name']);
-      echo '<pre>';
-      if (move_uploaded_file($_FILES['pic1']['tmp_name'], $uploadfile)) {
-          echo "File is valid, and was successfully uploaded.\n";
-      } else {
-          echo "Possible file upload attack!\n";
+
+  if ((($_FILES['pic1']['type'] == 'image/jpeg') || $_FILES['pic1']['type'] == 'image/jpg') && $_FILES['pic1']['size'] < 1000000 && $_FILES['pic1']['size'] > 0)
+    {
+      if(file_exists('photos/'.md5($_SESSION['username'],false) .'.jpg'))
+          unlink('photos/'.md5($_SESSION['username'],false) .'.jpg');
+
+      $_FILES['pic1']['name']=md5($_SESSION['username'],false) .'.jpg';
+      $src = 'photos/'.$_FILES['pic1']['name'];
+
+      if(move_uploaded_file($_FILES['pic1']['tmp_name'], $src)) {
+        //echo '<p>The file has been successfully uploaded.</p>';
+        $flag=true;
       }
-      echo 'Here is some more debugging info:';
-      print_r($_FILES);
-      print "</pre>";
     }
+    else
+    {
+      echo "<div align='center'><font color='#FF0000'>Invalid image. Please select valid image.</font></div><br>";
+      $flag=false;
+    }
+
+
+    // if(isset($_POST['pic1'])){
+    //   $uploaddir = "/git/picstory/";
+    //   $uploadfile = $uploaddir . basename($_FILES['pic1']['name']);
+    //   echo '<pre>';
+    //   if (move_uploaded_file($_FILES['pic1']['tmp_name'], $uploadfile)) {
+    //       echo "File is valid, and was successfully uploaded.\n";
+    //   } else {
+    //       echo "Possible file upload attack!\n";
+    //   }
+    //   echo 'Here is some more debugging info:';
+    //   print_r($_FILES);
+    //   print "</pre>";
+    // }
     $stringData = '<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=1024" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <title>'.$_POST['event'].'</title>
@@ -32,15 +53,13 @@
             <!-- TODO: Check if Location is not empty; Add Location -->
         </div>
         <div id="json2" class="step slide" data-x="-1000" data-y="-1500">
-          <p class="briefmemory">'.$_POST['detail1'].'</p>
+          <img src="photos/'.md5($_SESSION['username']).'.jpg" class="imgclass" />
         </div>
         <div class="step slide" data-x="-1000" data-y="-1500" data-z="-500" data-rotate-y="900" >
-          <img src="1.jpg" class="imgclass" />
+          <p class="briefmemory">'.$_POST['detail2'].'</p>
         </div>
         <div class="step slide" data-x="-1000" data-y="-1500" data-z="9000" data-rotate-y="900">
-            <p class="briefmemory">
-              Or some sample text like this. This text is to write brief meomries about the event.
-            </p>
+          <img src="1.jpg" class="imgclass" />
         </div>
         <div class="slide2 step" data-x="0" data-y="1000" data-scale="4">
           <img src="1.jpg" class="imgclass" />
@@ -53,7 +72,7 @@
           <h6>This was &nbsp;<b>'.$_POST['event'].'</b>&nbsp;<br/> by '.$_POST['whom'].'.</h6>
           <br>
           <div id="createyours">
-            Create your own picstory now at <a target="_blank" href="http://picstory.me">picstory.me</a>
+            Create your own picstory now at &nbsp;<a target="_blank" href="http://picstory.me">picstory.me</a>
           </div></center>
         </div>
     </div>

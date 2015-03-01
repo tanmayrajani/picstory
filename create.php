@@ -29,7 +29,7 @@
 		<input type="text" name="whom" placeholder="Picstory By ... (Enter only Name / Nickname)" />
 		<select>
 			<option selected disabled value="">Select Visual Effect</option>
-			<option value="fade-in">Fade-in</option>
+			<option value="fade-in">Custom 1</option>
 			<option value="fade-out">Fade-out</option>
 			<option value="slide-left">Slide-left</option>
 			<option value="slide-right">Slide-right</option>

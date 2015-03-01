@@ -19,6 +19,8 @@ body {
 /*form styles*/
 #msform {
 	width: 900px;
+	min-height:600px;
+	overflow-y:auto;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
@@ -93,7 +95,7 @@ body {
 	color: white;
 	text-transform: uppercase;
 	font-size: 9px;
-	width: 10%;
+	width: 33%;
 	float: left;
 	position: relative;
 }
@@ -129,6 +131,10 @@ body {
 #progressbar li.active:before,  #progressbar li.active:after{
 	background: #27AE60;
 	color: white;
+}
+
+.fs-ready{
+	font-size:2em;
 }
 
 .happy{
