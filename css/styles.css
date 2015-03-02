@@ -20,7 +20,7 @@ body {
 #msform {
 	width: 900px;
 	min-height:600px;
-	overflow-y:auto;
+	overflow: hidden;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
@@ -142,4 +142,14 @@ body {
 	width:200px;
 	margin: 10px auto 30px auto;
 	display:block;
+}
+
+#imagePreview {
+    width: 90px;
+    height: 90px;
+    float:left;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
 }

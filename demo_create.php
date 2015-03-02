@@ -1,4 +1,5 @@
 <?php  ?>
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Picstory</title>
@@ -35,23 +36,78 @@
   <fieldset>
     <h2 class="fs-title">Step 2</h2>
     <h3 class="fs-subtitle">Event Details / Photo</h3>
-    <input type="textarea" name="detail1" placeholder="Some brief sweet memories..." /><br/>OR<br/>
-    <input type="file" name="pic1" accept="image/*">
-    
-    <hr/>
+    <!-- <input type="textarea" name="detail1" placeholder="Some brief sweet memories..." /><br/>OR<br/>
+    <input type="file" name="pic1" accept="image/*"> -->
+    <div id="dvPreview"></div>
+    <input id="fileupload" type="file" name="imageURL[]" class="img" multiple="multiple" />
     <input type="button" name="previous2" class="previous action-button" value="Previous" />
-    <input type="button" name="next2" class="next action-button" value="Next" /><br/><br/><br/>
+    <input type="button" name="next3" class="next action-button" value="Next" /><br/><br/><br/>
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Ready!</h2>
     <h3 class="fs-subtitle">Almost there</h3>
     <h1 class="fs-ready">Hit Generate to create your Picstory</h1><br/>
-    <input type="button" name="previous10" class="previous action-button" value="Previous" />
-    <input type="submit" name="submit" class="submit action-button" value="Generate" />
+    <input type="button" name="previous3" class="previous action-button" value="Previous" />
+    <input  type="submit" name="submit" class="submit action-button gen" value="Generate" />
   </fieldset>
 </form>
-<script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="js/jquery-2.1.0.min.js"></script>
 <script src="js/jquery.easing.min.js" type="text/javascript"></script>
 <script src="js/myscriptt.js"></script>
+<script type="text/javascript">
+$(function() {
+
+    // $('#msform').on('submit',(function(e) {
+    //     e.preventDefault();
+    //     var formData = new FormData(this);
+
+    //     $.ajax({
+    //         type:'POST',
+    //         url: $(this).attr('action'),
+    //         data:formData,
+    //         cache:false,
+    //         contentType: false,
+    //         processData: false,
+    //         success:function(data){
+    //             console.log("success");
+    //             console.log(data);
+    //         },
+    //         error: function(data){
+    //             console.log("error");
+    //             console.log(data);
+    //         }
+    //     });
+    // }));
+
+    $("#fileupload").change(function () {
+        if (typeof (FileReader) != "undefined") {
+            //$("#msform").submit();
+            var dvPreview = $("#dvPreview");
+            dvPreview.html("");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            $($(this)[0].files).each(function () {
+                var file = $(this);
+                if (regex.test(file[0].name.toLowerCase())) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var img = $("<img />");
+                        img.attr("style", "height:80px;width: 80px");
+                        img.attr("src", e.target.result);
+                        dvPreview.append(img);
+                    }
+                    reader.readAsDataURL(file[0]);
+                } else {
+                    alert(file[0].name + " is not a valid image file.");
+                    dvPreview.html("");
+                    return false;
+                }
+            });
+        } else {
+            alert("This browser does not support HTML5 FileReader.");
+        }
+    });
+});
+//$("#uploadFile").after('<input id="uploadFile" type="file" name="image" class="img" />');
+</script>
 </body>
 </html>
