@@ -1,22 +1,25 @@
 <?php
-  $files=array();
-  $fdata=$_FILES['imageURL'];
-  if(is_array($fdata['name'])){
-  for($i=0;$i<count($fdata['name']);++$i){
-          $files[]=array(
-      'name'    =>$fdata['name'][$i],
-      'type'  => $fdata['type'][$i],
-      'tmp_name'=>$fdata['tmp_name'][$i],
-      'error' => $fdata['error'][$i], 
-      'size'  => $fdata['size'][$i]  
-      );
-      }
-  }
-  else $files[]=$fdata;
+  if(isset($_POST['submit'])){
+    $files=array();
+    $fdata=$_FILES['imageURL'];
+    if(is_array($fdata['name'])){
+    for($i=0;$i<count($fdata['name']);++$i){
+            $files[]=array(
+        'name'    =>$fdata['name'][$i],
+        'type'  => $fdata['type'][$i],
+        'tmp_name'=>$fdata['tmp_name'][$i],
+        'error' => $fdata['error'][$i], 
+        'size'  => $fdata['size'][$i]  
+        );
+        }
+    }
+    else $files[]=$fdata;
 
-  foreach ($files as $file) { 
-      echo $file['tmp_name'] . "<br/>";
+    foreach ($files as $file) { 
+        echo $file['name'] . "<br/>";
+    }
   }
+  else header('Location: demo_create.php');
 
 
 
@@ -58,6 +61,7 @@
     //   print_r($_FILES);
     //   print "</pre>";
     // }
+
   //   $stringData = '<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=1024" />
   //       <meta name="apple-mobile-web-app-capable" content="yes" />
   //       <title>'.$_POST['event'].'</title>

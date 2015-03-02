@@ -35,7 +35,7 @@
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Step 2</h2>
-    <h3 class="fs-subtitle">Event Details / Photo</h3>
+    <h3 class="fs-subtitle">Upload All photos (Max. 8 Currently)</h3>
     <!-- <input type="textarea" name="detail1" placeholder="Some brief sweet memories..." /><br/>OR<br/>
     <input type="file" name="pic1" accept="image/*"> -->
     <div id="dvPreview"></div>
