@@ -1,2 +1,2 @@
 # Picstory
-photo story using jmpress.js
+A Photo Story Builder using jmpress.js
