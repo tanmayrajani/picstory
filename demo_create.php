@@ -46,7 +46,8 @@
   <fieldset>
     <h2 class="fs-title">Ready!</h2>
     <h3 class="fs-subtitle">Almost there</h3>
-    <h1 class="fs-ready">Hit Generate to create your Picstory</h1><br/>
+    <!-- <h1 class="fs-ready">Hit Generate to create your Picstory</h1><br/> -->
+    <input type="text" name="msg" placeholder="Enter your personalized message.."/>
     <input type="button" name="previous3" class="previous action-button" value="Previous" />
     <input  type="submit" name="submit" class="submit action-button gen" value="Generate" />
   </fieldset>

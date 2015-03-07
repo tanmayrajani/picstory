@@ -3,28 +3,37 @@
     $files=array();
     $fdata=$_FILES['imageURL'];
     if(is_array($fdata['name'])){
-    for($i=0;$i<count($fdata['name']);++$i){
-            $files[]=array(
-        'name'    =>$fdata['name'][$i],
-        'type'  => $fdata['type'][$i],
-        'tmp_name'=>$fdata['tmp_name'][$i],
-        'error' => $fdata['error'][$i], 
-        'size'  => $fdata['size'][$i]  
+      for($i=0;$i<count($fdata['name']);++$i){
+        $files[]=array(
+          'name'  =>$fdata['name'][$i],
+          'type'  => $fdata['type'][$i],
+          'tmp_name'=>$fdata['tmp_name'][$i],
+          'error' => $fdata['error'][$i], 
+          'size'  => $fdata['size'][$i]  
         );
-        }
+      }
     }
     else $files[]=$fdata;
 
     foreach ($files as $file) { 
         echo $file['name'] . "<br/>";
     }
+
+    $target_path = "uploads/";
+    for($i=0; $i<count($_FILES['imageURL']['name']); $i++){
+        $ext = explode('.', basename( $_FILES['imageURL']['name'][$i]));
+        $target_path = $target_path . md5(uniqid()) . "." . $ext[count($ext)-1]; 
+
+        if(move_uploaded_file($_FILES['imageURL']['tmp_name'][$i], $target_path)) {
+            //echo "The file has been uploaded successfully <br />";
+        } else{
+            echo "There was an error uploading the file, please try again! <br />";
+        }
+    }
   }
   else header('Location: demo_create.php');
 
 
-
-  // $_SESSION['username']="helllo";
-  // if(isset($_POST['submit'])){
   //   $filename="user1.html";
   //   $fh = fopen($filename, 'w') or die("can't open file");
 
