@@ -112,11 +112,11 @@ echo '<!doctype html>
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A layout example that shows off a responsive product landing page.">
+<meta name="description" content="Picstory is photo story generator application with amazing animations and transitions.">
 
-    <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
+    <title>Picstory | Modern World Photo Sharing</title>
 
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" href="css/pure-min.css">
 
 <!--[if lte IE 8]>
   
@@ -146,9 +146,9 @@ echo '<!doctype html>
         <a class="pure-menu-heading" href=""></a>
 
         <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-            <li class="pure-menu-item"><a href="#logging-in" class="pure-menu-link">Sign Up</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Demo</a></li>
+            <li class="pure-menu-item"><a href="#logging-in" class="pure-menu-link">Sign In</a></li>
         </ul>
     </div>
 </div>
@@ -177,7 +177,7 @@ echo '<!doctype html>
                     Get Started Quickly
                 </h3>
                 <p>
-                    Just hit Sign in with Google to start adding images for the Presentation. No more passwords to remember.
+                    Just hit <a style="color:inherit" href="#logging-in"><strong><u>Sign in with Google</u></strong></a> to start adding images for the Presentation. No more passwords to remember.
                 </p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -216,19 +216,16 @@ echo '<!doctype html>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
 
-            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
+            <h2 class="content-head content-head-ribbon">The Easiest way to Share memories.</h2>
 
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor.
+                This is the modern world photo sharing. Hardcopy albums and nowadays CDs are also found in museums. All you need to do is.. Hit <a style="color:inherit" href="#logging-in"><strong><u>Sign in with Google</u></strong></a> button and add your unforgettable memory in form of pictures. Hit generate and voila.. An amazing Picstory is ready for you. Share with friends on social media and have fun.
             </p>
         </div>
     </div>
 
     <div id="logging-in" class="content">
-        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
+        <h2 class="content-head is-center">Sign in here. It\'s free!</h2>
 
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
@@ -270,7 +267,7 @@ echo '<!doctype html>
     </div>
 
     <div class="footer l-box is-center">
-        View the source of this layout to learn more. Made with love by the YUI Team.
+        &copy; 2015. No Rights Reserved by <a href=""></a>
     </div>
 
 </div>
