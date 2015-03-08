@@ -148,7 +148,7 @@ echo '<!doctype html>
         <ul class="pure-menu-list">
             <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+            <li class="pure-menu-item"><a href="#logging-in" class="pure-menu-link">Sign Up</a></li>
         </ul>
     </div>
 </div>
@@ -192,7 +192,7 @@ echo '<!doctype html>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">
                     <i class="fa fa-th-large"></i>
-                    Totally Free
+                    Completely Free
                 </h3>
                 <p>
                     Exactly! Currently, Picstory costs nothing more than Alia Bhatt\'s IQ score. 
@@ -201,10 +201,10 @@ echo '<!doctype html>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">
                     <i class="fa fa-check-square-o"></i>
-                    Plays Nice
+                    3D Transitions
                 </h3>
                 <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    Amazing Animatoins and Transitions between images. After all, we are in 2015, not 1990s.
                 </p>
             </div>
         </div>
@@ -212,7 +212,7 @@ echo '<!doctype html>
 
     <div class="ribbon l-box-lrg pure-g">
         <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-            <img class="pure-img-responsive" alt="File Icons" width="300" src="img/common/file-icons.png">
+            <img class="pure-img-responsive" alt="File Icons" width="300" src="media/file-icons.png">
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
 
