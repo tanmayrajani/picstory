@@ -129,8 +129,6 @@ echo '<!doctype html>
   
 <!--<![endif]-->
 
-
-
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="css/marketing-old-ie.css">
     <![endif]-->
@@ -177,7 +175,7 @@ echo '<!doctype html>
                     Get Started Quickly
                 </h3>
                 <p>
-                    Just hit <a style="color:inherit" href="#logging-in"><strong><u>Sign in with Google</u></strong></a> to start adding images for the Presentation. No more passwords to remember.
+                    Just hit <a class="endlink" href="#logging-in"><strong>Sign in with Google</strong></a> to start adding images for the Presentation. No more passwords to remember.
                 </p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -186,7 +184,7 @@ echo '<!doctype html>
                     Modern Photo Sharing
                 </h3>
                 <p>
-                    Because Uploading images over some Facebook album is too mainstream. Remember Moriarty saying "BORINGGG"
+                    Because Uploading images over Facebook albums is boring. Remember Moriarity saying "BORINGGG"
                 </p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -219,47 +217,27 @@ echo '<!doctype html>
             <h2 class="content-head content-head-ribbon">The Easiest way to Share memories.</h2>
 
             <p>
-                This is the modern world photo sharing. Hardcopy albums and nowadays CDs are also found in museums. All you need to do is.. Hit <a style="color:inherit" href="#logging-in"><strong><u>Sign in with Google</u></strong></a> button and add your unforgettable memory in form of pictures. Hit generate and voila.. An amazing Picstory is ready for you. Share with friends on social media and have fun.
+                This is the modern world photo sharing. Hardcopy albums and nowadays CDs are also found in museums. All you need to do is.. Hit <a class="endlink" href="#logging-in"><strong>Sign in with Google</strong></a> button and add your unforgettable memory in form of pictures. Hit generate and voila.. An amazing Picstory is ready for you. Share with friends on social media and have fun.
             </p>
         </div>
     </div>
 
     <div id="logging-in" class="content">
-        <h2 class="content-head is-center">Sign in here. It\'s free!</h2>
-
+        <h2 class="content-head is-center">Because Signing in with Email is too mainstream!</h2>
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                <form class="pure-form pure-form-stacked">
-                    <fieldset>
-
-                        <label for="name">Your Name</label>
-                        <input id="name" type="text" placeholder="Your Name">
-
-
-                        <label for="email">Your Email</label>
-                        <input id="email" type="email" placeholder="Your Email">
-
-                        <label for="password">Your Password</label>
-                        <input id="password" type="password" placeholder="Your Password">
-
-                        <button type="submit" class="pure-button">Sign Up</button>
-                    </fieldset>
-                </form>
+                <center><a class="login" href="'.$authUrl.'"><img class="pure-img-responsive loginimg" alt="Sign in" width="400" height="100" src="media/sign-in-with-google.png"></img></a><br/><span class="text-below-img">You must be having a Google account, I guess! <a target="_blank" class="endlink" href="https://accounts.google.com/SignUp">No?</a></span></center>
             </div>
 
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Contact Us</h4>
+            <div class="l-box-lrg pure-u-1 info pure-u-md-3-5">
+                <h4>Contact Us, I mean, me!</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
+                    Hey there! I\'m Tanmay. I\'m pre-final year student at <a class="endlink" href="http://ddu.ac.in">DDU, Nadiad</a>. I\'m pursuing B.Tech. in Computer Science. You can contact me at <strong>rajani.tanmay@gmail.com</strong>. Or on <a target="_blank" class="endlink" href="http://facebook.com/tanmay.rajani">Facebook</a>, or <a target="_blank" class="endlink" href="http://quora.com/Tanmay-Rajani">Quora</a>, or <a target="_blank" class="endlink" href="http://twitter.com/rajani_tanmay">twitter</a>.
                 </p>
 
                 <h4>More Information</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
+                    Picstory is my pre-final year\'s project. I\'ve created this using open source JavaScript library called <strong><a target="_blank" class="endlink" href="https://github.com/jmpressjs/jmpress.js">jmpress.js</a></strong> . Have fun! Cheers! :)
                 </p>
             </div>
         </div>
@@ -267,7 +245,7 @@ echo '<!doctype html>
     </div>
 
     <div class="footer l-box is-center">
-        &copy; 2015. No Rights Reserved by <a href=""></a>
+        &copy; 2015. No Rights Reserved by <b><a class="endlink" href="http://tanmayrajani.github.io">Tanmay Rajani</a></b>
     </div>
 
 </div>

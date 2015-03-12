@@ -230,6 +230,29 @@ a.pure-button-primary {
     background: #111;
 }
 
+.endlink{
+    text-decoration: underline;
+    color: inherit;
+    font-size: inherit;
+}
+
+.endlink:hover{
+    text-decoration: none;
+    
+}
+
+.info{
+    box-shadow: -1px 0 0;
+}
+
+.loginimg{
+    margin-top: 40px;
+}
+
+.text-below-img{
+    font-size: .8em;
+}
+
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some

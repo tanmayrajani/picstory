@@ -1,11 +1,50 @@
 <?php  ?>
-<!DOCTYPE HTML>
-<html>
+
+
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Picstory</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Picstory is photo story generator application with amazing animations and transitions.">
+
+    <title>Picstory | Modern World Photo Sharing</title>
+
+<link rel="stylesheet" href="css/pure-min.css">
+
+<!--[if lte IE 8]>
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+  
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+  
+<!--<![endif]-->
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/marketing.css">
+    <!--<![endif]-->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href=""></a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="http://localhost/git/picstory/" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a target="_blank" href="http://localhost/git/picstory/story.html" class="pure-menu-link">Demo</a></li>
+            <li class="pure-menu-item"><a href="http://localhost/git/picstory/index.php?reset=1" class="pure-menu-link">Sign Out</a></li>
+        </ul>
+    </div>
+</div>
+
 <!-- multistep form -->
 <form enctype="multipart/form-data" id="msform" method="post" action="generator.php">
   <!-- progressbar -->
