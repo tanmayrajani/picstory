@@ -40,13 +40,13 @@
         <ul class="pure-menu-list">
             <li class="pure-menu-item"><a href="http://localhost/git/picstory/" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item"><a target="_blank" href="http://localhost/git/picstory/story.html" class="pure-menu-link">Demo</a></li>
-            <li class="pure-menu-item"><a href="http://localhost/git/picstory/index.php?reset=1" class="pure-menu-link">Sign Out</a></li>
+            <li class="pure-menu-item"><a href="http://localhost/git/picstory/index.php?reset=1" class="pure-menu-link">Sign Out(<?php echo $_GET['user_name']; ?>)</a></li>
         </ul>
     </div>
 </div>
 
 <!-- multistep form -->
-<form enctype="multipart/form-data" id="msform" method="post" action="generator.php">
+<form enctype="multipart/form-data" id="msform" method="post" action="generator.php?user_id=<?php echo $_GET['user_id']; ?>&user_name=<?php echo $_GET['user_name'] ?>">
   <!-- progressbar -->
   <ul id="progressbar">
     <li class="active">Start</li>
@@ -57,12 +57,12 @@
   <fieldset>
     <h2 class="fs-title">Start</h2>
     <h3 class="fs-subtitle">Basic Information of Event</h3>
-    <input type="text" name="event" placeholder="Event Name (e.g. Mom's Birthday / Trip to California)" />
-    <input type="text" name="location" placeholder="Location (Optional)" />
-    <input type="text" name="whom" placeholder="Picstory By ... (Enter only Name / Nickname)" />
-    <select>
-      <option selected disabled value="">Select Visual Effect</option>
-      <option value="fade-in">Custom 1</option>
+    <input type="text" id="event" name="event" placeholder="Event Name (e.g. Mom's Birthday / Trip to California)" />
+    <input type="text" id="location" name="location" placeholder="Location (Optional)" />
+    <input type="text" id="whom" name="whom" readonly value="<?php echo $_GET['user_name']; ?>" placeholder="Picstory By ... (Enter only Name / Nickname)" />
+    <select id="visual" name="visual">
+      <option disabled value="">Select Visual Effect</option>
+      <option selected value="fade-in">Template 1</option>
       <option value="fade-out">Fade-out</option>
       <option value="slide-left">Slide-left</option>
       <option value="slide-right">Slide-right</option>
@@ -86,7 +86,7 @@
     <h2 class="fs-title">Ready!</h2>
     <h3 class="fs-subtitle">Almost there</h3>
     <!-- <h1 class="fs-ready">Hit Generate to create your Picstory</h1><br/> -->
-    <input type="text" name="msg" placeholder="Enter your personalized message.."/>
+    <input type="text" name="msg" placeholder="Enter your personalized message.. (If any)"/>
     <input type="button" name="previous3" class="previous action-button" value="Previous" />
     <input  type="submit" name="submit" class="submit action-button gen" value="Generate" />
   </fieldset>
@@ -96,28 +96,6 @@
 <script src="js/myscriptt.js"></script>
 <script type="text/javascript">
 $(function() {
-
-    // $('#msform').on('submit',(function(e) {
-    //     e.preventDefault();
-    //     var formData = new FormData(this);
-
-    //     $.ajax({
-    //         type:'POST',
-    //         url: $(this).attr('action'),
-    //         data:formData,
-    //         cache:false,
-    //         contentType: false,
-    //         processData: false,
-    //         success:function(data){
-    //             console.log("success");
-    //             console.log(data);
-    //         },
-    //         error: function(data){
-    //             console.log("error");
-    //             console.log(data);
-    //         }
-    //     });
-    // }));
 
     $("#fileupload").change(function () {
         if (typeof (FileReader) != "undefined") {

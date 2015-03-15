@@ -74,13 +74,6 @@ else
 	$authUrl = $gClient->createAuthUrl();
 }
 
-
-
-
-
-
-
-
 if(isset($authUrl)) //user is not logged in, show login button
 {
 	$_SESSION['uuser']='nothing';
@@ -94,17 +87,23 @@ else // user logged in
 		$_SESSION['uuser']='wrong';
 		die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	}
+	else{
+        $_SESSION['user_name'] = $user_name;
+        $_SESSION['user_id'] = $user_id;
+        $_SESSION['profile_image_url'] = $profile_image_url;    
+
+        //compare user id in our database
+        $user_exist = $mysqli->query("SELECT COUNT(google_id) as usercount FROM google_users WHERE google_id=$user_id")->fetch_object()->usercount; 
+        if($user_exist)
+        {
+            $_SESSION['uuser']='again';
+        }else{ 
+            $_SESSION['uuser']='new';
+            $mysqli->query("INSERT INTO google_users (google_id, google_name, google_email, google_link, google_picture_link) 
+            VALUES ($user_id, '$user_name','$email','$profile_url','$profile_image_url')");
+        }
+    }
 	
-	//compare user id in our database
-	$user_exist = $mysqli->query("SELECT COUNT(google_id) as usercount FROM google_users WHERE google_id=$user_id")->fetch_object()->usercount; 
-	if($user_exist)
-	{
-		$_SESSION['uuser']='again';
-	}else{ 
-		$_SESSION['uuser']='new';
-		$mysqli->query("INSERT INTO google_users (google_id, google_name, google_email, google_link, google_picture_link) 
-		VALUES ($user_id, '$user_name','$email','$profile_url','$profile_image_url')");
-	}
 }
 
 echo '<!doctype html>
@@ -144,13 +143,19 @@ echo '<!doctype html>
         <a class="pure-menu-heading" href=""></a>
 
         <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Demo</a></li>
-            <li class="pure-menu-item"><a href="#logging-in" class="pure-menu-link">Sign In</a></li>
-        </ul>
-    </div>
-</div>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>';
+        if($_SESSION['uuser']=='nothing')
+            echo '<li class="pure-menu-item"><a target="_blank" href="story.html" class="pure-menu-link">Demo</a></li>
+        <li class="pure-menu-item"><a href="#logging-in" class="pure-menu-link">Sign In</a></li>';
+        else if($_SESSION['uuser']=='again' || $_SESSION['uuser']=='new'){
+            if(file_exists('stories/'.$user_id.'.html')) echo '<li class="pure-menu-item"><a href="stories/'.$user_id.'.html" target="_blank" class="pure-menu-link">Your Story</a></li>';
+            else echo '<li class="pure-menu-item"><a target="_blank" href="story.html" class="pure-menu-link">Demo</a></li>';
+            echo '<li class="pure-menu-item"><a href="demo_create.php?user_id='.$user_id.'&profile_image_url='.$profile_image_url.'&user_name='.$user_name.'" class="pure-menu-link">Create</a></li>
+        <li class="pure-menu-item"><a href="?reset=1" class="pure-menu-link">Sign Out ('.$user_name.')</a></li>';
+        }
+            
 
+echo '</ul></div></div>
 <div class="splash-container">
     <div class="splash">
         <h1 class="splash-head">Picstory</h1>
@@ -184,7 +189,7 @@ echo '<!doctype html>
                     Modern Photo Sharing
                 </h3>
                 <p>
-                    Because Uploading images over Facebook albums is boring. Remember Moriarity saying "BORINGGG"
+                    Because Uploading images over Facebook albums is boring. Remember Moriarty saying "BORINGGG"
                 </p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -225,12 +230,16 @@ echo '<!doctype html>
     <div id="logging-in" class="content">
         <h2 class="content-head is-center">Because Signing in with Email is too mainstream!</h2>
         <div class="pure-g">
-            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                <center><a class="login" href="'.$authUrl.'"><img class="pure-img-responsive loginimg" alt="Sign in" width="400" height="100" src="media/sign-in-with-google.png"></img></a><br/><span class="text-below-img">You must be having a Google account, I guess! <a target="_blank" class="endlink" href="https://accounts.google.com/SignUp">No?</a></span></center>
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">';
+            if($_SESSION['uuser']=='nothing')
+                echo '<center><a class="login" href="'.$authUrl.'">';
+            else echo '<center><a class="login" onClick="alert(\'You are already logged in. Go to Your Account\');" href="#">';
+
+            echo '<img class="pure-img-responsive loginimg" alt="Sign in" width="400" height="100" src="media/sign-in-with-google.png"></img></a><br/><span class="text-below-img">You must be having a Google account, I guess! <a target="_blank" class="endlink" href="https://accounts.google.com/SignUp">No?</a></span></center>
             </div>
 
             <div class="l-box-lrg pure-u-1 info pure-u-md-3-5">
-                <h4>Contact Us, I mean, me!</h4>
+                <h4>Contact me</h4>
                 <p>
                     Hey there! I\'m Tanmay. I\'m pre-final year student at <a class="endlink" href="http://ddu.ac.in">DDU, Nadiad</a>. I\'m pursuing B.Tech. in Computer Science. You can contact me at <strong>rajani.tanmay@gmail.com</strong>. Or on <a target="_blank" class="endlink" href="http://facebook.com/tanmay.rajani">Facebook</a>, or <a target="_blank" class="endlink" href="http://quora.com/Tanmay-Rajani">Quora</a>, or <a target="_blank" class="endlink" href="http://twitter.com/rajani_tanmay">twitter</a>.
                 </p>

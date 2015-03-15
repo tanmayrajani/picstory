@@ -2,8 +2,28 @@ var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
+$('#event, #location, #whom, #visual').focus(function(){
+	$(this).css('border-color','#ccc');
+})
+
 $(".next").click(function(){
 	if(animating) return false;
+	if($('#event').val()==''){
+		$('#event').css('border-color','red');
+		return false;	
+	} 
+	if($('#location').val()==''){
+		$('#location').css('border-color','red');
+		return false;	
+	} 
+	if($('#whom').val()==''){
+		$('#whom').css('border-color','red');
+		return false;	
+	} 
+	if($('#visual').val()==''){
+		$('#visual').css('border-color','red');
+		return false;	
+	} 
 	animating = true;
 
 	current_fs = $(this).parent();
