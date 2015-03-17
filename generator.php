@@ -124,7 +124,7 @@
           </div></center>
         </div>
     </div>
-    <button id="request2"></button>
+    <div id="request2"></div>
     <script src="../js/jquery-2.1.0.min.js"></script>
     <script src="../js/jmpress.min.js"></script>
     <script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
@@ -132,11 +132,13 @@
     $(function(){
       $("#impress").jmpress();
       if (!screenfull.enabled) {
-        return false;
+        $("#request2").click(function () {
+          alert("full screen is not supported! :/");
+        });          
       }
       else{
         $("#request2").click(function () {
-          screenfull.request();
+          screenfull.toggle();
         });  
       }
     });</script>
@@ -161,18 +163,15 @@
     <h3 class="fs-subtitle">You've just created a picstory!</h3>
     <img class="happy" src="media/happy64.png" alt="Awesome" />
     <input type="button" name="view" class="view action-button" onclick="window.open('<?php echo 'stories/'.$_GET['user_id'].".html"; ?>','_blank')" value="View" />
-    <input type="button" name="fbshare" class="fbshare action-button" value="Facebook" />
-    <input type="button" name="twshare" class="twshare action-button" value="Twitter" />
-    <input type="button" name="gpshare" class="gpshare action-button" value="Google+" />
+    <input type="button" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://localhost/git/picstory/stories/<?php echo $_GET['user_id'].".html"; ?>','_blank')" name="fbshare" class="fbshare action-button" value="Facebook" />
+    <input type="button" onclick="window.open('https://<?php echo $_GET['user_id'].".html"; ?>','_blank')" name="twshare" class="twshare action-button" value="Twitter" />
+    <input type="button" onclick="window.open('<?php echo $_SERVER[ 'DOCUMENT_ROOT' ] ?>','_blank')" name="gpshare" class="gpshare action-button" value="Google+" />
   </fieldset>
 </div>
 <script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
 <script src="js/jquery.easing.min.js" type="text/javascript"></script>
 <script src="js/myscriptt.js"></script>
 <script>
-  $(".fbshare").click(function(){
-    alert('Facebook share window appers!');
-  });
 
   $(".twshare").click(function(){
     alert('Twitter share window appers!');
