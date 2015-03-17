@@ -124,9 +124,22 @@
           </div></center>
         </div>
     </div>
+    <button id="request2"></button>
     <script src="../js/jquery-2.1.0.min.js"></script>
     <script src="../js/jmpress.min.js"></script>
-    <script>$(function(){$("#impress").jmpress();});</script>
+    <script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
+    <script>
+    $(function(){
+      $("#impress").jmpress();
+      if (!screenfull.enabled) {
+        return false;
+      }
+      else{
+        $("#request2").click(function () {
+          screenfull.request();
+        });  
+      }
+    });</script>
     </body>
     </html>
     ';
