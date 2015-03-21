@@ -91,8 +91,23 @@
         <title>'.$_POST['event'].'</title>
 
         <meta name="description" content="This is a Picstory. It is a photo presentation application created by Tanmay Rajani." />
-        <meta name="author" content="Tanmay Rajani" /><link href="../css/stylesofstory.css" rel="stylesheet" />
-    </head>
+        <meta name="author" content="Tanmay Rajani" /><link href="../css/stylesofstory.css" rel="stylesheet" />';
+        if(isset($_POST['visual'])){
+          if($_POST['visual']=='pink'){
+            $stringData = $stringData . '<style>body{background: rgba(233,30,98,1); background: -moz-radial-gradient(center, ellipse cover, rgba(233,30,98,1) 0%, rgba(136,14,79,1) 56%, rgba(77,9,45,1) 100%); background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(233,30,98,1)), color-stop(56%, rgba(136,14,79,1)), color-stop(100%, rgba(77,9,45,1))); background: -webkit-radial-gradient(center, ellipse cover, rgba(233,30,98,1) 0%, rgba(136,14,79,1) 56%, rgba(77,9,45,1) 100%); background: -o-radial-gradient(center, ellipse cover, rgba(233,30,98,1) 0%, rgba(136,14,79,1) 56%, rgba(77,9,45,1) 100%); background: -ms-radial-gradient(center, ellipse cover, rgba(233,30,98,1) 0%, rgba(136,14,79,1) 56%, rgba(77,9,45,1) 100%); background: radial-gradient(ellipse at center, rgba(233,30,98,1) 0%, rgba(136,14,79,1) 56%, rgba(77,9,45,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#EB3472", endColorstr="#82536c", GradientType=1 );}</style>';
+          }
+          elseif ($_POST['visual']=='yellow') {
+            $stringData = $stringData . '<style>body{background: rgba(255,235,59,1); background: -moz-radial-gradient(center, ellipse cover, rgba(255,235,59,1) 0%, rgba(245,127,23,1) 52%, rgba(163,99,42,1) 100%); background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,235,59,1)), color-stop(52%, rgba(245,127,23,1)), color-stop(100%, rgba(163,99,42,1))); background: -webkit-radial-gradient(center, ellipse cover, rgba(255,235,59,1) 0%, rgba(245,127,23,1) 52%, rgba(163,99,42,1) 100%); background: -o-radial-gradient(center, ellipse cover, rgba(255,235,59,1) 0%, rgba(245,127,23,1) 52%, rgba(163,99,42,1) 100%); background: -ms-radial-gradient(center, ellipse cover, rgba(255,235,59,1) 0%, rgba(245,127,23,1) 52%, rgba(163,99,42,1) 100%); background: radial-gradient(ellipse at center, rgba(255,235,59,1) 0%, rgba(245,127,23,1) 52%, rgba(163,99,42,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffeb3b", endColorstr="#a3632a", GradientType=1 );}</style>';
+          }
+          elseif ($_POST['visual']=='deep-orange') {
+            $stringData = $stringData . '<style>body{background: rgba(255,86,34,1); background: -moz-radial-gradient(center, ellipse cover, rgba(255,86,34,1) 0%, rgba(191,54,12,1) 53%, rgba(92,26,6,1) 100%); background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,86,34,1)), color-stop(53%, rgba(191,54,12,1)), color-stop(100%, rgba(92,26,6,1))); background: -webkit-radial-gradient(center, ellipse cover, rgba(255,86,34,1) 0%, rgba(191,54,12,1) 53%, rgba(92,26,6,1) 100%); background: -o-radial-gradient(center, ellipse cover, rgba(255,86,34,1) 0%, rgba(191,54,12,1) 53%, rgba(92,26,6,1) 100%); background: -ms-radial-gradient(center, ellipse cover, rgba(255,86,34,1) 0%, rgba(191,54,12,1) 53%, rgba(92,26,6,1) 100%); background: radial-gradient(ellipse at center, rgba(255,86,34,1) 0%, rgba(191,54,12,1) 53%, rgba(92,26,6,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ff5622", endColorstr="#5c1a06", GradientType=1 );}</style>';
+          }
+          elseif ($_POST['visual']=='red') {
+            $stringData = $stringData . '<style>body{background: rgba(244,66,54,1); background: -moz-radial-gradient(center, ellipse cover, rgba(244,66,54,1) 0%, rgba(183,28,28,1) 49%, rgba(97,8,8,1) 100%); background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(244,66,54,1)), color-stop(49%, rgba(183,28,28,1)), color-stop(100%, rgba(97,8,8,1))); background: -webkit-radial-gradient(center, ellipse cover, rgba(244,66,54,1) 0%, rgba(183,28,28,1) 49%, rgba(97,8,8,1) 100%); background: -o-radial-gradient(center, ellipse cover, rgba(244,66,54,1) 0%, rgba(183,28,28,1) 49%, rgba(97,8,8,1) 100%); background: -ms-radial-gradient(center, ellipse cover, rgba(244,66,54,1) 0%, rgba(183,28,28,1) 49%, rgba(97,8,8,1) 100%); background: radial-gradient(ellipse at center, rgba(244,66,54,1) 0%, rgba(183,28,28,1) 49%, rgba(97,8,8,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#F77B72", endColorstr="#610808", GradientType=1 );}</style>';
+          }
+        }
+          
+    $stringData = $stringData . '</head>
     <body class="impress-not-supported"><div class="fallback-message"></div>
     <div id="impress">
         <div class="step slide" data-x="-3000" data-y="-1500">
@@ -102,21 +117,21 @@
           $stringData = $stringData . '<span class="icon">'.$_POST['location'].'</span>';
         }
         $stringData = $stringData . '</center></div>';
-        if(isset($paths[1])){
+        if(isset($paths[0])){
           $stringData = $stringData . '<div class="step slide" data-x="-1000" data-y="-1500" data-z="9000" data-rotate-y="900">
-          <img src="../'.$paths[1].'" class="imgclass" /></div>';
-          if(isset($paths[2])){
-            $stringData = $stringData . '<div class="slide2 step" data-x="0" data-y="1000" data-scale="4"><img src="../'.$paths[2].'" class="imgclass" /></div>';
-            if(isset($paths[3])){
-              $stringData = $stringData . '<div class="step" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="1080" data-rotate-z="45" data-scale="6"><img src="../'.$paths[3].'" class="imgclass" /></div>';
-              if(isset($paths[4])){
-                $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[4].'" class="imgclass" /></div>';  
-                if(isset($paths[5])){
-                  $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="13000" data-rotate-x="90"><img src="../'.$paths[5].'" class="imgclass" /></div>';  
-                  if(isset($paths[6])){
-                    $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[6].'" class="imgclass" /></div>';  
-                    if(isset($paths[7])){
-                      $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[7].'" class="imgclass" /></div>';  
+          <img src="../'.$paths[0].'" class="imgclass" /></div>';
+          if(isset($paths[1])){
+            $stringData = $stringData . '<div class="slide2 step" data-x="0" data-y="1000" data-scale="4"><img src="../'.$paths[1].'" class="imgclass" /></div>';
+            if(isset($paths[2])){
+              $stringData = $stringData . '<div class="step" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="1080" data-rotate-z="45" data-scale="6"><img src="../'.$paths[2].'" class="imgclass" /></div>';
+              if(isset($paths[3])){
+                $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[3].'" class="imgclass" /></div>';  
+                if(isset($paths[4])){
+                  $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="13000" data-rotate-x="90"><img src="../'.$paths[4].'" class="imgclass" /></div>';  
+                  if(isset($paths[5])){
+                    $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[5].'" class="imgclass" /></div>';  
+                    if(isset($paths[6])){
+                      $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[6].'" class="imgclass" /></div>';  
                     }
                   }
                 }
@@ -130,7 +145,7 @@
           <h6>This was &nbsp;<b>'.$_POST['event'].'</b>&nbsp;<br/> by '.$_POST['whom'].'.</h6>
           <br>
           <div id="createyours">
-            Create your own picstory now at &nbsp;<a target="_blank" href="http://picstory.me">picstory.me</a>
+            Create your own picstory now at &nbsp;<a class="picstory-link" target="_blank" href="http://picstory.me">picstory.me</a>
           </div></center>
         </div>
     </div>

@@ -12,10 +12,6 @@ $(".next").click(function(){
 		$('#event').css('border-color','red');
 		return false;	
 	} 
-	if($('#location').val()==''){
-		$('#location').css('border-color','red');
-		return false;	
-	} 
 	if($('#whom').val()==''){
 		$('#whom').css('border-color','red');
 		return false;	

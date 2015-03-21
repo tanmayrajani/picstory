@@ -62,14 +62,13 @@
     <input type="text" id="whom" name="whom" readonly value="<?php echo $_GET['user_name']; ?>" placeholder="Picstory By ... (Enter only Name / Nickname)" />
     <input type="text" hidden name="userid" value="<?php echo $_GET['user_id'] ?>" />
     <select id="visual" name="visual">
-      <option disabled value="">Select Visual Effect</option>
-      <option selected value="fade-in">Template 1</option>
-      <option value="fade-out">Fade-out</option>
-      <option value="slide-left">Slide-left</option>
-      <option value="slide-right">Slide-right</option>
-      <option value="rotate-180">Rotate 180 degree</option>
-      <option value="rotate-360">Rotate 360 degree</option>
-      <option value="slide-right">Slide-right</option>
+      <option selected disabled value="">Select BackGround Gradients</option>
+      <option value="default">Default</option>
+      <option value="pink">Pink</option>
+      <option value="yellow">Yellow</option>
+      <option value="orange">Orange</option>
+      <option value="red">Red</option>
+      <option value="deep-orange">Deep Orange</option>
     </select>
     <input type="button" name="next1" class="next action-button" value="Next" />
   </fieldset>
