@@ -46,7 +46,7 @@
 </div>
 
 <!-- multistep form -->
-<form enctype="multipart/form-data" id="msform" method="post" action="generator.php?user_id=<?php echo $_GET['user_id']; ?>&user_name=<?php echo $_GET['user_name'] ?>">
+<form enctype="multipart/form-data" id="msform" method="POST" action="generator.php">
   <!-- progressbar -->
   <ul id="progressbar">
     <li class="active">Start</li>
@@ -60,6 +60,7 @@
     <input type="text" id="event" name="event" placeholder="Event Name (e.g. Mom's Birthday / Trip to California)" />
     <input type="text" id="location" name="location" placeholder="Location (Optional)" />
     <input type="text" id="whom" name="whom" readonly value="<?php echo $_GET['user_name']; ?>" placeholder="Picstory By ... (Enter only Name / Nickname)" />
+    <input type="text" hidden name="userid" value="<?php echo $_GET['user_id'] ?>" />
     <select id="visual" name="visual">
       <option disabled value="">Select Visual Effect</option>
       <option selected value="fade-in">Template 1</option>

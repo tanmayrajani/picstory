@@ -111,7 +111,6 @@ i, em { font-style: italic }
     display: block;
     font-size: 50px;
     line-height: 72px;
-
     margin-top: 100px;
 }
 
@@ -171,4 +170,19 @@ i, em { font-style: italic }
     height: 35px;
     top: 22.5px;
     right: 22.5px;
+    cursor: pointer;
+}
+
+.icon {
+    background-image: url('../media/67347.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+    font-size: .79em;
+    position: relative;
+    padding-left: 36px; /* Or size of icon + spacing */
+}
+
+.picstoryby{
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
