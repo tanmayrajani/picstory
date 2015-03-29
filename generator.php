@@ -27,15 +27,28 @@
 
     $paths = array();
     
+    if (!is_dir('uploads/'.md5($yy[0]))) {
+      mkdir('uploads/'.md5($yy[0]), 0777, true);
+    }
+    else{
+      $files = glob('uploads/'.md5($yy[0])."/*"); // get all file names
+      foreach($files as $file){ // iterate files
+        if(is_file($file))
+          unlink($file); // delete file
+      }
+    }
+    
     for($i=0; $i<count($_FILES['imageURL']['name']); $i++){
+
+        
         $ext = explode('.', basename( $_FILES['imageURL']['name'][$i]));
-        $target_path = "uploads/" . md5($yy[0]) . $i .".".$ext[count($ext)-1]; 
+        $target_path = "uploads/" . md5($yy[0]) . "/" . md5($yy[0]) . $i .".".$ext[count($ext)-1]; 
         if(move_uploaded_file($_FILES['imageURL']['tmp_name'][$i], $target_path)) {
             //echo "The file has been uploaded successfully <br />";
           $paths[$i] = $target_path;
           $_SESSION['okay']='okay';
         } else{
-            echo "There was an error uploading the file, please try again! <br />";
+            echo "<br/><br/><br/><br/><br/>There was an error uploading the file, please try again later! <br />";
         }
     }
   }
