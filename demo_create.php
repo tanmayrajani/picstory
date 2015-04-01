@@ -1,4 +1,4 @@
-<?php  ?>
+<?php if(!isset($_GET['user_name'])) header('Location: index.php'); ?>
 
 
 <!doctype html>

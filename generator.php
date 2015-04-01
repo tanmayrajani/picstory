@@ -37,7 +37,7 @@
           unlink($file); // delete file
       }
     }
-    
+
     for($i=0; $i<count($_FILES['imageURL']['name']); $i++){
 
         
@@ -81,8 +81,7 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href=""></a>
-
+        <a class="pure-menu-heading" href="index.php"></a>
         <ul class="pure-menu-list">
             <li class="pure-menu-item"><a href="http://localhost/git/picstory/" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item"><a target="_blank" href="http://localhost/git/picstory/story.html" class="pure-menu-link">Demo</a></li>
@@ -144,7 +143,7 @@
                   if(isset($paths[5])){
                     $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[5].'" class="imgclass" /></div>';  
                     if(isset($paths[6])){
-                      $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[6].'" class="imgclass" /></div>';  
+                      $stringData = $stringData . '<div class="step slide" data-x="-11000" data-y="13000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[6].'" class="imgclass" /></div>';  
                     }
                   }
                 }

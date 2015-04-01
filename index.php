@@ -148,9 +148,9 @@ echo '<!doctype html>
             echo '<li class="pure-menu-item"><a target="_blank" href="story.html" class="pure-menu-link">Demo</a></li>
         <li class="pure-menu-item"><a href="#logging-in" class="pure-menu-link">Sign In</a></li>';
         else if($_SESSION['uuser']=='again' || $_SESSION['uuser']=='new'){
-            if(file_exists('stories/'.$user_id.'.html')) echo '<li class="pure-menu-item"><a href="stories/'.$user_id.'.html" target="_blank" class="pure-menu-link">Your Story</a></li>';
+            if(file_exists('stories/'.$user_id.'.html')) echo '<li class="pure-menu-item"><a href="stories/'.$user_id.'.html" target="_blank" class="pure-menu-link">Your Story</a></li><li class="pure-menu-item"><a href="editor.php?user_id='.$user_id.'&user_name='.$user_name.'" class="pure-menu-link">Edit</a></li>';
             else echo '<li class="pure-menu-item"><a target="_blank" href="story.html" class="pure-menu-link">Demo</a></li>';
-            echo '<li class="pure-menu-item"><a href="demo_create.php?user_id='.$user_id.'&profile_image_url='.$profile_image_url.'&user_name='.$user_name.'" class="pure-menu-link">Create</a></li>
+            echo '<li class="pure-menu-item"><a href="demo_create.php?user_id='.$user_id.'&profile_image_url='.$profile_image_url.'&user_name='.$user_name.'" class="pure-menu-link">Create New</a></li>
         <li class="pure-menu-item"><a href="?reset=1" class="pure-menu-link">Sign Out ('.$user_name.')</a></li>';
         }
             
