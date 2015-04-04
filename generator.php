@@ -131,19 +131,19 @@
         $stringData = $stringData . '</center></div>';
         if(isset($paths[0])){
           $stringData = $stringData . '<div class="step slide" data-x="-1000" data-y="-1500" data-z="9000" data-rotate-y="900">
-          <img src="../'.$paths[0].'" class="imgclass" /></div>';
+          <img id="im1" src="../'.$paths[0].'" class="imgclass" /></div>';
           if(isset($paths[1])){
-            $stringData = $stringData . '<div class="slide2 step" data-x="0" data-y="1000" data-scale="4"><img src="../'.$paths[1].'" class="imgclass" /></div>';
+            $stringData = $stringData . '<div class="slide2 step" data-x="0" data-y="1000" data-scale="4"><img src="../'.$paths[1].'" id="im2" class="imgclass" /></div>';
             if(isset($paths[2])){
-              $stringData = $stringData . '<div class="step" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="1080" data-rotate-z="45" data-scale="6"><img src="../'.$paths[2].'" class="imgclass" /></div>';
+              $stringData = $stringData . '<div class="step" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="1080" data-rotate-z="45" data-scale="6"><img id="im3" src="../'.$paths[2].'" class="imgclass" /></div>';
               if(isset($paths[3])){
-                $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[3].'" class="imgclass" /></div>';  
+                $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img id="im4" src="../'.$paths[3].'" class="imgclass" /></div>';  
                 if(isset($paths[4])){
-                  $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="13000" data-rotate-x="90"><img src="../'.$paths[4].'" class="imgclass" /></div>';  
+                  $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="13000" data-rotate-x="90"><img id="im5" src="../'.$paths[4].'" class="imgclass" /></div>';  
                   if(isset($paths[5])){
-                    $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[5].'" class="imgclass" /></div>';  
+                    $stringData = $stringData . '<div class="step slide" data-x="5000" data-y="3000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img id="im6" src="../'.$paths[5].'" class="imgclass" /></div>';  
                     if(isset($paths[6])){
-                      $stringData = $stringData . '<div class="step slide" data-x="-11000" data-y="13000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img src="../'.$paths[6].'" class="imgclass" /></div>';  
+                      $stringData = $stringData . '<div class="step slide" data-x="-11000" data-y="13000" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="6"><img id="im7" src="../'.$paths[6].'" class="imgclass" /></div>';  
                     }
                   }
                 }
@@ -163,11 +163,11 @@
     </div>
     <div id="request2"></div>
     <script src="../js/jquery-2.1.0.min.js"></script>
-    <script src="../js/jmpress.min.js"></script>
+    <script src="../js/impress.min.js"></script>
     <script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
     <script>
     $(function(){
-      $("#impress").jmpress();
+      impress().init();
       if (!screenfull.enabled) {
         $("#request2").click(function () {
           alert("full screen is not supported! :/");
