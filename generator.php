@@ -161,23 +161,11 @@
           </div></center>
         </div>
     </div>
-    <div id="request2"></div>
     <script src="../js/jquery-2.1.0.min.js"></script>
     <script src="../js/impress.min.js"></script>
-    <script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
     <script>
     $(function(){
       impress().init();
-      if (!screenfull.enabled) {
-        $("#request2").click(function () {
-          alert("full screen is not supported! :/");
-        });          
-      }
-      else{
-        $("#request2").click(function () {
-          screenfull.toggle();
-        });  
-      }
     });</script>
     </body>
     </html>

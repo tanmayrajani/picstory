@@ -189,7 +189,7 @@ echo '</ul></div></div>
                     Modern Photo Sharing
                 </h3>
                 <p>
-                    Because Uploading images over Facebook albums is boring. Remember Moriarty saying "BORINGGG"
+                    Because Uploading images over Facebook albums is boring. Why would you do such boring things?
                 </p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -198,7 +198,7 @@ echo '</ul></div></div>
                     Completely Free
                 </h3>
                 <p>
-                    Exactly! Currently, Picstory costs nothing more than Alia Bhatt\'s IQ score. 
+                    Exactly! Currently, Picstory costs nothing. We shall develop pricing in future.
                 </p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -241,12 +241,12 @@ echo '</ul></div></div>
             <div class="l-box-lrg pure-u-1 info pure-u-md-3-5">
                 <h4>Contact me</h4>
                 <p>
-                    Hey there! I\'m Tanmay. I\'m pre-final year student at <a class="endlink" href="http://ddu.ac.in">DDU, Nadiad</a>. I\'m pursuing B.Tech. in Computer Science. You can contact me at <strong>rajani.tanmay@gmail.com</strong>. Or on <a target="_blank" class="endlink" href="http://facebook.com/tanmay.rajani">Facebook</a>, or <a target="_blank" class="endlink" href="http://quora.com/Tanmay-Rajani">Quora</a>, or <a target="_blank" class="endlink" href="http://twitter.com/rajani_tanmay">twitter</a>.
+                    Hey there! I\'m Tanmay. I\'m pre-final year student at <a class="endlink" target="_blank" href="http://ddu.ac.in">DDU, Nadiad</a>. I\'m pursuing B.Tech. in Computer Science. You can contact me at <strong>rajani.tanmay@gmail.com</strong>. Or on <a target="_blank" class="endlink" href="http://facebook.com/tanmay.rajani">Facebook</a>, or <a target="_blank" class="endlink" href="http://quora.com/Tanmay-Rajani">Quora</a>, or <a target="_blank" class="endlink" href="http://twitter.com/rajani_tanmay">twitter</a>.
                 </p>
 
                 <h4>More Information</h4>
                 <p>
-                    Picstory is my pre-final year\'s project. I\'ve created this using open source JavaScript library called <strong><a target="_blank" class="endlink" href="https://github.com/jmpressjs/jmpress.js">jmpress.js</a></strong> . Have fun! Cheers! :)
+                    Picstory is my pre-final year\'s project. I\'ve created this using open source JavaScript library called <strong><a target="_blank" class="endlink" href="https://github.com/bartaz/impress.js/">impress.js</a></strong> . Have fun! Cheers! :)
                 </p>
             </div>
         </div>
@@ -254,7 +254,7 @@ echo '</ul></div></div>
     </div>
 
     <div class="footer l-box is-center">
-        &copy; 2015. No Rights Reserved by <b><a class="endlink" href="http://tanmayrajani.github.io">Tanmay Rajani</a></b>
+        &copy; 2015. No Rights Reserved by <b><a class="endlink" target="_blank" href="http://tanmayrajani.github.io">Tanmay Rajani</a></b>
     </div>
 
 </div>
